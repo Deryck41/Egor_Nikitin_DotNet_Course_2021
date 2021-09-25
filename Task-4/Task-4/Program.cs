@@ -7,9 +7,22 @@ namespace Task_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse).Max());
-            // This gets the data, then translates to an array
-            // Then translates to an array of int and finds the max number
+            int input = int.Parse(Console.ReadLine());
+            int firstDigit = input % 10;
+            int secondDigit = input / 100;
+            int thirdDigit = input / 10 % 10;
+            if (firstDigit>=secondDigit && firstDigit >= thirdDigit)
+            {
+                Console.WriteLine(firstDigit);
+            }
+            else if (secondDigit > firstDigit && secondDigit >= thirdDigit)
+            {
+                Console.WriteLine(secondDigit);
+            }
+            else
+            {
+                Console.WriteLine(thirdDigit);
+            }
 
             Console.ReadKey();
         }

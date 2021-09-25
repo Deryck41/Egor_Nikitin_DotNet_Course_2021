@@ -17,8 +17,8 @@ namespace Task_3
             {
                 Console.WriteLine("Нou need to enter a number!");
             }
-            Console.ReadKey();
 
+            Console.ReadKey();
         }
     }
 }

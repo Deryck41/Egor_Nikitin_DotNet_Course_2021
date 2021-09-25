@@ -11,6 +11,7 @@ namespace Task_4
             int firstDigit = input % 10;
             int secondDigit = input / 100;
             int thirdDigit = input / 10 % 10;
+
             if (firstDigit>=secondDigit && firstDigit >= thirdDigit)
             {
                 Console.WriteLine(firstDigit);

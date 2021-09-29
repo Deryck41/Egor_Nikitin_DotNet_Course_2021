@@ -7,15 +7,12 @@ namespace Task2_5
         static void Main(string[] args)
         {
             Console.Write("Enter the lengths of the sides of the triangle.\n\nSide 1: ");
-
             bool firstSuccessInput = float.TryParse(Console.ReadLine(), out float firstSide);
 
             Console.Write("Side 2: ");
-
             bool secondSuccessInput = float.TryParse(Console.ReadLine(), out float secondSide);
 
             Console.Write("Side 3: ");
-
             bool thirdSuccessInput = float.TryParse(Console.ReadLine(), out float thirdSide);
 
             if (firstSuccessInput && secondSuccessInput && thirdSuccessInput)
@@ -34,13 +31,11 @@ namespace Task2_5
                         Console.WriteLine("This triangle is isosceles");
                     }
                 }
-
                 else
                 {
                     Console.WriteLine("\nThis triangle does not exist");
                 }
             }
-
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;

@@ -17,10 +17,10 @@ namespace Task2_5
 
             if (firstSuccessInput && secondSuccessInput && thirdSuccessInput)
             {
-                if (firstSide + secondSide > thirdSide && firstSide + thirdSide > secondSide && secondSide +
-                    thirdSide > firstSide)
+                if (firstSide + secondSide > thirdSide && firstSide + thirdSide > secondSide && secondSide + thirdSide > firstSide)
                 {
                     Console.WriteLine("\nThis triangle exists");
+
                     if (firstSide == secondSide && secondSide == thirdSide)
                     {
                         Console.WriteLine("This triangle is equilateral");

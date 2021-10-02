@@ -31,7 +31,7 @@ namespace Task2_2
                 }
                 else
                 {
-                    average = thirdNumber;
+                    average = firstNumber;
                 }
 
                 Console.WriteLine($"\nIn ascending order: \t{min}\t{average}\t{max}");

@@ -17,7 +17,7 @@ namespace Task2_5
 
             if (firstSuccessInput && secondSuccessInput && thirdSuccessInput)
             {
-                if (firstSide + secondSide > thirdSide && firstSide + thirdSide > secondSide && secondSide + thirdSide > firstSide)
+                if (firstSide + secondSide >= thirdSide && firstSide + thirdSide >= secondSide && secondSide + thirdSide >= firstSide)
                 {
                     Console.WriteLine("\nThis triangle exists");
 
@@ -25,7 +25,6 @@ namespace Task2_5
                     {
                         Console.WriteLine("This triangle is equilateral");
                     }
-
                     else if(firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide)
                     {
                         Console.WriteLine("This triangle is isosceles");

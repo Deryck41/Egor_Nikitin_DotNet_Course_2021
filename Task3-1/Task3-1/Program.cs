@@ -40,7 +40,7 @@ namespace Task3_1
 
             foreach (int num in numArray)
             {
-                sumOfNumbers += NumSum(num);
+                sumOfNumbers += NumSum(Math.Abs(num));
             }
             Console.WriteLine("Answer: " + sumOfNumbers);
 

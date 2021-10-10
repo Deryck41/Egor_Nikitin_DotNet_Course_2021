@@ -13,9 +13,7 @@ namespace Task3_2
                 return 0;
             }
 
-
             int[] numArray = new int[size];
-
             Console.WriteLine("Input array: ");
             for (int i = 0; i < size; i++)
             {
@@ -36,8 +34,8 @@ namespace Task3_2
                     sum += num;
                 }
             }
-            Console.WriteLine("average: " + sum / count);
 
+            Console.WriteLine("average: " + sum / count);
             Console.ReadKey();
             return 0;
         }

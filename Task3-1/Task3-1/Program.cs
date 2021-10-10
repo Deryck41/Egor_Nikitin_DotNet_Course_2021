@@ -25,7 +25,6 @@ namespace Task3_1
             }
 
             int[] numArray = new int[size];
-
             Console.WriteLine("Input array: ");
             for (int i = 0; i < size; i++)
             {
@@ -37,7 +36,6 @@ namespace Task3_1
             }
 
             int sumOfNumbers = 0;
-
             foreach (int num in numArray)
             {
                 sumOfNumbers += NumSum(Math.Abs(num));

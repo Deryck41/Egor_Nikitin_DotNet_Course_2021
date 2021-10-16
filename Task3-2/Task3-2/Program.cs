@@ -4,29 +4,31 @@ namespace Task3_2
 {
     class Program
     {
-        static int Main(string[] args)
+        static void Main(string[] args)
         {
             Console.Write("Input size of array: ");
-            if (!int.TryParse(Console.ReadLine(), out int size))
+            int size;
+
+            while (!int.TryParse(Console.ReadLine(), out size))
             {
-                Console.WriteLine("Invalid input!");
-                return 0;
+                Console.WriteLine("Invalid input!\nTry Again.");
             }
 
-            int[] numArray = new int[size];
+            int[] numbers = new int[size];
             Console.WriteLine("Input array: ");
+
             for (int i = 0; i < size; i++)
             {
-                if (!int.TryParse(Console.ReadLine(), out numArray[i]))
+                while (!int.TryParse(Console.ReadLine(), out numbers[i]))
                 {
-                    Console.WriteLine("Invalid input!");
-                    return 0;
+                    Console.WriteLine("Invalid input!\nTry Again.");
                 }
             }
 
             int sum = 0;
             int count = 0;
-            foreach (int num in numArray)
+
+            foreach (int num in numbers)
             {
                 if (num > 0)
                 {
@@ -37,7 +39,6 @@ namespace Task3_2
 
             Console.WriteLine("average: " + sum / count);
             Console.ReadKey();
-            return 0;
         }
     }
 }

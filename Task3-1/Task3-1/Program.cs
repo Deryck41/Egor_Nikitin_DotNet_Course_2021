@@ -4,46 +4,49 @@ namespace Task3_1
 {
     class Program
     {
-        static int NumSum(int number)
+        static int NumberSum(int number)
         {
             int sum = 0;
+
             while (number != 0)
             {
                 sum += number % 10;
                 number /= 10;
             }
+
             return sum;
         }
 
-        static int Main(string[] args)
+        static void Main(string[] args)
         {
             Console.Write("Input size of array: ");
-            if (!int.TryParse(Console.ReadLine(), out int size))
+            int size;
+
+            while (!int.TryParse(Console.ReadLine(), out size))
             {
-                Console.WriteLine("Invalid input!");
-                return 0;
+                Console.WriteLine("Invalid input!\nTry Again.");
             }
 
-            int[] numArray = new int[size];
+            int[] numbers = new int[size];
             Console.WriteLine("Input array: ");
+
             for (int i = 0; i < size; i++)
             {
-                if (!int.TryParse(Console.ReadLine(), out numArray[i]))
+                while (!int.TryParse(Console.ReadLine(), out numbers[i]))
                 {
-                    Console.WriteLine("Invalid input!");
-                    return 0;
+                    Console.WriteLine("Invalid input!\nTry Again.");
                 }
             }
 
             int sumOfNumbers = 0;
-            foreach (int num in numArray)
-            {
-                sumOfNumbers += NumSum(Math.Abs(num));
-            }
-            Console.WriteLine("Answer: " + sumOfNumbers);
 
+            foreach (int number in numbers)
+            {
+                sumOfNumbers += NumberSum(Math.Abs(number));
+            }
+
+            Console.WriteLine("Answer: " + sumOfNumbers);
             Console.ReadKey();
-            return 0;
         }
     }
 }

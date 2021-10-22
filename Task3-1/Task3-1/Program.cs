@@ -42,7 +42,7 @@ namespace Task3_1
 
             foreach (int number in numbers)
             {
-                sumOfNumbers += NumberSum(Math.Abs(number));
+                sumOfNumbers += NumberSum(number);
             }
 
             Console.WriteLine("Answer: " + sumOfNumbers);

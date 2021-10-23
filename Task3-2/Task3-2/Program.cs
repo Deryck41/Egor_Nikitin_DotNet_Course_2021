@@ -9,14 +9,14 @@ namespace Task3_2
             Console.Write("Input size of array: ");
             int size;
 
-            while (!int.TryParse(Console.ReadLine(), out size))
+            while (!int.TryParse(Console.ReadLine(), out size) | size<1)
             {
                 Console.WriteLine("Invalid input!\nTry Again.");
             }
 
             int[] numbers = new int[size];
             Console.WriteLine("Input array: ");
-
+            
             for (int i = 0; i < size; i++)
             {
                 while (!int.TryParse(Console.ReadLine(), out numbers[i]))
@@ -28,12 +28,12 @@ namespace Task3_2
             int sum = 0;
             int count = 0;
 
-            foreach (int num in numbers)
+            foreach (int number in numbers)
             {
-                if (num > 0)
+                if (number > 0)
                 {
                     count++;
-                    sum += num;
+                    sum += number;
                 }
             }
 

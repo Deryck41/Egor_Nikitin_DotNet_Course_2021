@@ -9,7 +9,7 @@ namespace Task3_2
             Console.Write("Input size of array: ");
             int size;
 
-            while (!int.TryParse(Console.ReadLine(), out size) | size<1)
+            while (!int.TryParse(Console.ReadLine(), out size) || size<1)
             {
                 Console.WriteLine("Invalid input!\nTry Again.");
             }
@@ -37,7 +37,7 @@ namespace Task3_2
                 }
             }
 
-            Console.WriteLine("average: " + sum / count);
+            Console.WriteLine("average: " + (double)sum / numbers.Length);
             Console.ReadKey();
         }
     }

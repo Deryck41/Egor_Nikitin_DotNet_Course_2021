@@ -9,7 +9,7 @@ namespace Task3_4
             Console.Write("Input size of array: ");
             int size;
 
-            while(!int.TryParse(Console.ReadLine(), out size) | size < 1)
+            while (!int.TryParse(Console.ReadLine(), out size) || size < 1)
             {
                 Console.WriteLine("Invalid input!\nTry again.");
                 Console.Write("Input size of array: ");
@@ -17,7 +17,7 @@ namespace Task3_4
 
             int[] numbers = new int[size];
 
-            for (int i = 0; i < size-1; i++)
+            for (int i = 0; i < size - 1; i++)
             {
                 Console.Write("input the value of the array element at position " + i + ": ");
 
@@ -30,7 +30,7 @@ namespace Task3_4
 
             Console.Write("array: |");
 
-            for (int i = 0; i <size-1; i++)
+            for (int i = 0; i < size - 1; i++)
             {
                 Console.Write(numbers[i] + "|");
             }
@@ -39,13 +39,13 @@ namespace Task3_4
             Console.Write("Input position to insert: ");
             int position;
 
-            while (!int.TryParse(Console.ReadLine(), out position) | position < 0 | position > size-1)
+            while (!int.TryParse(Console.ReadLine(), out position) || position < 0 || position > size - 1)
             {
                 Console.WriteLine("Invalid input!\nTry again.");
                 Console.Write("Input position to insert: ");
             }
 
-            for (int i = size-1; i > position; i--)
+            for (int i = size - 1; i > position; i--)
             {
                 numbers[i] = numbers[i - 1];
             }

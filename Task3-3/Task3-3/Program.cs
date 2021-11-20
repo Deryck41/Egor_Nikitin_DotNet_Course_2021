@@ -39,6 +39,7 @@ namespace Task3_3
                         numberFrequency++;
                     }
                 }
+
                 if (numberFrequency > maxFrequency && numberFrequency != 1)
                 {
                     maxFrequency = numberFrequency;

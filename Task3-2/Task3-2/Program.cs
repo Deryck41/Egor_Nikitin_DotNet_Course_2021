@@ -37,7 +37,7 @@ namespace Task3_2
                 }
             }
 
-            Console.WriteLine("average: " + sum / numbers.Length);
+            Console.WriteLine("average: " + (double)sum / numbers.Length);
             Console.ReadKey();
         }
     }

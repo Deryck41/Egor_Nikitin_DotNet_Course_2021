@@ -10,7 +10,7 @@ namespace Task3_5
 
             foreach (int element in array)
             {
-                Console.Write(element+"|");
+                Console.Write(element + "|");
             }
 
             Console.WriteLine();
